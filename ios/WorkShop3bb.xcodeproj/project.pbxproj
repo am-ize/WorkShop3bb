@@ -31,6 +31,7 @@
 		C7D54E1E829A4CF298AEB5FF /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6723AD3D71324498AA82737C /* Octicons.ttf */; };
 		56AC784F820B4604BEDF10D5 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FB76301C33B4E33A7811126 /* SimpleLineIcons.ttf */; };
 		1EEB9D78EE89454098B047F4 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3288DF3E87C54AF1844A877D /* Zocial.ttf */; };
+		6D45FB0F615E40648B5CD385 /* libDashLine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 593B7DAF16934FBEABB7E882 /* libDashLine.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		6723AD3D71324498AA82737C /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		2FB76301C33B4E33A7811126 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		3288DF3E87C54AF1844A877D /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D8BBF9A97D68467AB2306EE2 /* DashLine.xcodeproj */ = {isa = PBXFileReference; name = "DashLine.xcodeproj"; path = "../node_modules/tipsi-dash-line/ios/DashLine.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		593B7DAF16934FBEABB7E882 /* libDashLine.a */ = {isa = PBXFileReference; name = "libDashLine.a"; path = "libDashLine.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D45FB0F615E40648B5CD385 /* libDashLine.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +163,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				D8BBF9A97D68467AB2306EE2 /* DashLine.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -536,6 +541,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkShop3bb.app/WorkShop3bb";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\tipsi-dash-line\ios\NativeDashLine/**",
+				);
 			};
 			name = Debug;
 		};
@@ -555,6 +568,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkShop3bb.app/WorkShop3bb";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\tipsi-dash-line\ios\NativeDashLine/**",
+				);
 			};
 			name = Release;
 		};
@@ -574,6 +595,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = WorkShop3bb;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\tipsi-dash-line\ios\NativeDashLine/**",
+				);
 			};
 			name = Debug;
 		};
@@ -592,6 +617,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = WorkShop3bb;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\tipsi-dash-line\ios\NativeDashLine/**",
+				);
 			};
 			name = Release;
 		};
@@ -619,6 +648,14 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\tipsi-dash-line\ios\NativeDashLine/**",
+				);
 			};
 			name = Debug;
 		};
@@ -646,6 +683,14 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\tipsi-dash-line\ios\NativeDashLine/**",
+				);
 			};
 			name = Release;
 		};
@@ -672,6 +717,14 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkShop3bb-tvOS.app/WorkShop3bb-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\tipsi-dash-line\ios\NativeDashLine/**",
+				);
 			};
 			name = Debug;
 		};
@@ -698,6 +751,14 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkShop3bb-tvOS.app/WorkShop3bb-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)\..\node_modules\tipsi-dash-line\ios\NativeDashLine/**",
+				);
 			};
 			name = Release;
 		};
